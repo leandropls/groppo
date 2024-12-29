@@ -84,7 +84,6 @@ def lambda_handler(request: Annotated[MessageRequest, Body]) -> MessageResponse:
 
     # Return the assistant's response
     if not messages:
-        print(messages_response)
         return MessageResponse(
             response="I'm sorry, I don't have a response for that.",
             thread_id=thread_id,
